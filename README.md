@@ -1,21 +1,17 @@
-# 도서관 프로젝트 
-도서관의 여러 가지 기능을 담고 있는 웹사이트를 만들어보았습니다.
-
+# 허균 블로그(게시판)프로젝트
+관리자가 작성하는 블로그를 만들었습니다.
+* 명확하게 밝혀진 바는 없지만 허균은 허준의 본명으로 출신과 정치적 위험을 피하기 위해 가명을 사용한 것으로 추정하고있습니다.
+  하지만 겸손이라는 이유와 그의 가명은 그의 저술물에 대한 인기를 증가시키고자 하는 전략적 선택이었을 수도 있습니다.
 
 ---
 
-# 구현한 기능
-![joblist](https://github.com/leeteagun/LibraryProject/assets/167273204/b66310e2-f13a-467e-940c-1987de935050)
 
-
-1)  상호대차 할 도서관 선택 기능(회원 기능)
-2)  상호대차 선택 후 신청 기능(회원 기능)
-3)  상호대차 신청 후 도서관 사서에게 승인요청 기능(회원 기능)
-4)  도서관 배송 정보 입력 기능(회원 기능)
-5)  정보 입력 후 신청 기능(회원 기능)
-6)  배송 신청 후 사서에게 승인요청 기능(회원기능)
-7)  사서로 로그인 form으로 이동시키는 기능(사서 기능)
-8)  사서 로그인 기능(사서 기능)
+1)  게시판 추가
+2)  게시판 수정
+3)  게시판 삭제
+4)  관리자 로그인
+5)  관리자 로그아웃
+6)  링크설정
 
 
 
@@ -28,73 +24,33 @@
 ---
 # 웹 페이지    
 
-1) index
+![COM(세대별 흔한 질병)](https://github.com/leeteagun/Board/assets/167273204/7ed94c79-80ad-4e9d-a65f-c3e65a3f6e11)
 
-![index1](https://github.com/KimJongHoss/LibraryProject/assets/162934165/4296a057-9632-4d64-b647-3f782580d81a)
-![index2](https://github.com/KimJongHoss/LibraryProject/assets/162934165/c9a65522-a4bf-4627-b03d-c7c868958223)
-![index3](https://github.com/KimJongHoss/LibraryProject/assets/162934165/7b02c8d9-5cb8-4458-8616-b54745888cde)
-![index4](https://github.com/KimJongHoss/LibraryProject/assets/162934165/cb636df8-4c65-401d-8744-5d178ea421ef)
-![index5](https://github.com/KimJongHoss/LibraryProject/assets/162934165/5499a02b-c81c-4856-b232-25e1690a1682)
+Main 페이지이자 세대별 흔한 질병 게시판입니다.
+또한 관리자가 로그인할 수 있는 창입니다 다른 창에선 관리자 로그인이 불가능 합니다.
 
+![DIS (질병 및 증상)](https://github.com/leeteagun/Board/assets/167273204/9f7ae7ab-8965-453b-a53c-62e2b1a3af63)
 
+질병 및 증상페이지 입니다.
 
-어젠도서관 홈페이지 기본 화면입니다.
+![HEA(의료서비스)](https://github.com/leeteagun/Board/assets/167273204/ac71e618-72b7-4882-87f9-4039134714ec)
 
----
+의료서비스 페이지 입니다
 
-2) 권한 별 index
+![MED(건강관리 및 건강생활)](https://github.com/leeteagun/Board/assets/167273204/afc66ab0-1362-4d9d-a5b0-89110a75fa04)
 
-![login](https://github.com/KimJongHoss/LibraryProject/assets/162934165/b05b1524-7313-45ad-8dd8-6597b8938cdb)
+건강관리 및 건강생활 페이지 입니다.
 
+![서울 세브란스](https://github.com/leeteagun/Board/assets/167273204/c21ee5a3-7f44-4856-97a7-8f651d86a52d)
 
-우측 상단에 있는 로그인 버튼을 눌러서 로그인을 할 수 있습니다. 
-
-로그인으로 인해 생성되는 세션에 따라서 index에 출력되는 내용이 조금씩 달라지게 됩니다.
-
-![semiMemberIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/a541fbc3-acda-4b80-b029-ae896285f5a2)
-
-
-준회원 index 화면입니다. 우측 상단에 '정회원 전환 신청' 배너가 추가됩니다.
-
-![regularMemberIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/edd5bdd6-70ae-4d2f-9cdf-8fa4d9eb86fa)
-
-정회원 index 화면입니다. 가장 기본적인 화면입니다.
-
-![overdueMemberIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/e37a6f9f-b0cb-4f37-af56-151759d3ce5f)
-
-연체 회원 index 화면입니다. 우측 상단에 '연체 회원 구제 신청' 배너가 추가됩니다.
-
-![blacklistMemberIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/eb3a1a5c-ef69-4722-8d93-0d4623f7eb2b)
-
-블랙리스트 회원 index 화면입니다. 우측 상단에 '블랙리스트 구제 신청' 배너가 추가됩니다.
-
-![adminMemberIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/4042c638-c673-4006-a33e-7bcbe8874325)
-
-사서/관리자 index 화면입니다. 우측 상단에 '관리자 모드' 배너가 추가됩니다.
-
-![adminIndex](https://github.com/KimJongHoss/LibraryProject/assets/162934165/9a7b9e66-ba5e-497a-865c-6ee9dc2879b3)
-
-관리자 모드를 누르시게 되면 adminIndex 화면으로 진입하실 수 있습니다.
-
+서울세브란스 링크설정입니다. 클릭시 상태창이 나오며 확인버튼 클릭시 서울세브란스 병원 홈페이지로 이동합니다.
 
 ---
 
 
-# 구성원
-```swift
-public Enginner YesterdayLibrary() {
-  public Enginner JongHo;
-  public Enginner MinKyung;
-  public Enginner Gahyeon;
-  public Enginner DooHyun;
-  public Enginner TaeGeon; // 작성자
-  public Enginner Sebin;
-  ...
-}
-```
 
 
----
+===
 
 # 사용 도구
 
