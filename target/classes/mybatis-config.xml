@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="ComBean" type="kr.co.dong.com.ComBean"/>
+		<typeAlias alias="DisBean" type="kr.co.dong.dis.DisBean"/>
+		<typeAlias alias="HeaBean" type="kr.co.dong.hea.HeaBean"/>
+		<typeAlias alias="MedBean" type="kr.co.dong.med.MedBean"/>
+		<typeAlias alias="ManagerBean" type="kr.co.dong.manager.ManagerBean"/>
+	</typeAliases>
+</configuration>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.dong.mapper">
+	
+	<!-- select 부분  -->
+	<select id="comlist" resultType="ComBean">
+		select * from com
+	</select>
+	
+	<select id="dislist" resultType="DisBean">
+		select * from dis
+	</select>
+	
+	<select id="healist" resultType="HeaBean">
+		select * from hea
+	</select>
+	
+	<select id="medlist" resultType="MedBean">
+		select * from med
+	</select>
+	
+	<!-- 게시글 상세내용 -->
+	<select id="comDetail" parameterType="int" resultType="ComBean">
+		select * from com where id = #{id}
+	</select>
+	
+	<select id="disDetail" parameterType="int" resultType="DisBean">
+		select * from dis where id = #{id}
+	</select>
+	
+	<select id="heaDetail" parameterType="int" resultType="HeaBean">
+		select * from hea where id = #{id}
+	</select>
+	
+	<select id="medDetail" parameterType="int" resultType="MedBean">
+		select * from med where id = #{id}
+	</select>
+	
+	<!-- insert 부분 -->
+	
+	<insert id="cominsert" parameterType="ComBean">
+		insert into com
+		(id, title, content, author, day, etc)
+		values(#{id}, #{title}, #{content}, #{author}, CURDATE(), #{etc})
+	</insert>
+	
+	<insert id="disinsert" parameterType="DisBean">
+		insert into dis
+		(id, title, content, author, day, etc)
+		values(#{id}, #{title}, #{content}, #{author}, CURDATE(), #{etc})
+	</insert>
+	
+	 <insert id="heainsert" parameterType="HeaBean">
+		insert into hea
+		(id, title, content, author, day, etc)
+		values(#{id}, #{title}, #{content}, #{author}, CURDATE(), #{etc})
+	</insert>
+	
+	<insert id="medinsert" parameterType="MedBean">
+		insert into med
+		(id, title, content, author, day, etc)
+		values(#{id}, #{title}, #{content}, #{author}, CURDATE(), #{etc})
+	</insert>
+	
+	<!-- update 부분 -->
+	
+	<update id="comupdate" parameterType="ComBean">
+		update com set
+		title = #{title}, content = #{content}, author = #{author}, day = CURDATE()
+		where id = #{id}
+	</update>
+	
+	<update id="disupdate" parameterType="DisBean">
+		update dis set
+		title = #{title}, content = #{content}, author = #{author}, day = CURDATE()
+		where id = #{id}
+	</update>
+	
+	 <update id="heaupdate" parameterType="HeaBean">
+		update hea set
+		title = #{title}, content = #{content}, author = #{author}, day = CURDATE()
+		where id = #{id}
+	</update>
+	
+	<update id="medupdate" parameterType="MedBean">
+		update med set
+		title = #{title}, content = #{content}, author = #{author}, day = CURDATE()
+		where id = #{id}
+	</update>
+	
+	<!-- delect 부분 -->
+	
+	<delete id="comdelete" parameterType="int">
+		delete from com where id = #{id}
+	</delete>
+	
+	<delete id="disdelete" parameterType="int">
+		delete from dis where id = #{id}
+	</delete>
+	
+	 <delete id="headelete" parameterType="int">
+		delete from hea where id = #{id}
+	</delete>
+	
+	<delete id="medelete" parameterType="int">
+		delete from med where id = #{id}
+	</delete>
+	
+	<!-- 관리자 로그인 -->
+	
+	<select id="manager" parameterType="int" resultType="String">
+	select name from manager where password = #{password}
+	</select>
+	
+</mapper>
